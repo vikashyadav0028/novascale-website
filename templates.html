@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Templates & Live Demos | NovaScale Global - Noida Growth Studio</title>
+  <meta name="description" content="Explore live, interactive websites built for local clinics, gyms, salons, real estate, restaurants, and coaching centers. Launch your business site in 5 days." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#1e1b4b',
+              950: '#090d16'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom Design System CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-600 selection:text-white">
+
+  <!-- Top Micro Announcement Bar -->
+  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+          📍 NOIDA, INDIA & GLOBAL
+        </span>
+        <span>Empowering clinics, gyms, salons, restaurants & retail leaders across India & worldwide</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> WhatsApp response: &lt; 15 mins
+        </span>
+        <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20want%20to%20discuss%20growing%20my%20business." target="_blank" class="text-white hover:text-indigo-400 flex items-center gap-1 transition-colors font-bold">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+          <i data-lucide="sparkles" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-2xl font-black tracking-tight text-slate-950">NovaScale<span class="text-indigo-600">.</span></span>
+          <span class="block text-[10px] uppercase font-extrabold tracking-widest text-slate-400 -mt-1">Growth Studio • Noida</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-bold text-slate-600">
+        <a href="index.html" class="hover:text-indigo-600 transition-colors">Home</a>
+        <a href="services.html" class="hover:text-indigo-600 transition-colors">Services</a>
+        <a href="pricing.html" class="hover:text-indigo-600 transition-colors">Pricing</a>
+        <a href="templates.html" class="text-indigo-600 flex items-center gap-1">
+          <span>Templates & Demos</span>
+          <span class="bg-indigo-600 text-white text-[10px] px-2 py-0.5 rounded-full font-extrabold">6 Live</span>
+        </a>
+        <a href="about.html" class="hover:text-indigo-600 transition-colors">About Us</a>
+        <a href="contact.html" class="hover:text-indigo-600 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20am%20interested%20in%20a%20website%20template%20for%20my%20business." 
+           target="_blank" 
+           class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-md shadow-emerald-600/25 transition-all hover:scale-105">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>WhatsApp Founder</span>
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-1.5 bg-slate-950 hover:bg-slate-800 text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-all hover:shadow-lg">
+          <span>Claim Free Audit</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-indigo-400"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200 transition-colors" aria-label="Toggle Navigation">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Slide-Over Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-slate-950/60 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85%] bg-white z-50 shadow-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <div class="flex items-center gap-2 font-black text-slate-900 text-lg">
+          <div class="w-8 h-8 rounded-xl bg-indigo-600 flex items-center justify-center text-white"><i data-lucide="sparkles" class="w-4 h-4"></i></div>
+          <span>NovaScale<span class="text-indigo-600">.</span></span>
+        </div>
+        <button id="close-menu-btn" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col gap-4 text-base font-bold text-slate-800">
+        <a href="index.html" class="p-2.5 rounded-xl hover:bg-slate-100">Home</a>
+        <a href="services.html" class="p-2.5 rounded-xl hover:bg-slate-100">Services</a>
+        <a href="pricing.html" class="p-2.5 rounded-xl hover:bg-slate-100">Pricing & Packages</a>
+        <a href="templates.html" class="p-2.5 rounded-xl hover:bg-indigo-50 text-indigo-600 flex items-center justify-between">
+          <span>Templates & Demos</span>
+          <span class="bg-indigo-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">6 Live</span>
+        </a>
+        <a href="about.html" class="p-2.5 rounded-xl hover:bg-slate-100">About Us (Noida Studio)</a>
+        <a href="contact.html" class="p-2.5 rounded-xl hover:bg-slate-100">Contact Us</a>
+      </nav>
+    </div>
+
+    <div class="space-y-3 pt-6 border-t border-slate-100">
+      <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20am%20interested%20in%20a%20website%20template." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 text-white p-3.5 rounded-xl font-bold text-sm shadow-md">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Chat on WhatsApp Directly</span>
+      </a>
+      <a href="contact.html" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 text-white p-3.5 rounded-xl font-bold text-sm">
+        <span>Request Free Strategy Call</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative pt-14 pb-16 overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] glow-primary rounded-full pointer-events-none -z-10 blur-3xl opacity-70"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-200/80 text-indigo-700 text-xs sm:text-sm font-extrabold mb-6 shadow-sm">
+        <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Interactive Live Website Blueprints • 5-Day Delivery Guarantee</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-slate-950 max-w-4xl mx-auto leading-tight mb-6">
+        See Exactly What Your New <br class="hidden sm:inline" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">High-Conversion Website Looks Like.</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
+        We don't sell blank WordPress templates that break in 2 weeks. Every blueprint below is pre-engineered for ultra-fast mobile loading, Google Maps SEO ranking, and direct WhatsApp lead capture. Click any live demo to interact with it!
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto">
+        <button onclick="filterTemplates('all')" class="filter-pill active px-4 py-2 rounded-xl text-xs font-bold bg-slate-950 text-white transition-all shadow-sm">
+          All Blueprints (6)
+        </button>
+        <button onclick="filterTemplates('clinic')" class="filter-pill px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:border-indigo-400 transition-all">
+          🏥 Clinics & Dental
+        </button>
+        <button onclick="filterTemplates('gym')" class="filter-pill px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:border-indigo-400 transition-all">
+          🏋️ Gyms & Fitness
+        </button>
+        <button onclick="filterTemplates('salon')" class="filter-pill px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:border-indigo-400 transition-all">
+          ✨ Salons & Spas
+        </button>
+        <button onclick="filterTemplates('realestate')" class="filter-pill px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:border-indigo-400 transition-all">
+          🏢 Real Estate
+        </button>
+        <button onclick="filterTemplates('restaurant')" class="filter-pill px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:border-indigo-400 transition-all">
+          🍕 Restaurants & Cafés
+        </button>
+        <button onclick="filterTemplates('coaching')" class="filter-pill px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:border-indigo-400 transition-all">
+          🎓 Coaching & Institutes
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Templates Grid -->
+  <section class="pb-24 pt-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="templates-grid">
+        
+        <!-- Blueprint 1: Clinic -->
+        <div class="template-card clinic bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <!-- Card Header / Mockup Banner -->
+            <div class="h-52 bg-gradient-to-tr from-cyan-900 via-cyan-800 to-slate-900 p-6 flex flex-col justify-between relative text-white">
+              <div class="flex items-center justify-between">
+                <span class="bg-cyan-500/20 text-cyan-300 border border-cyan-400/30 text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                  Healthcare & Dental
+                </span>
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> 99/100 Mobile Speed
+                </span>
+              </div>
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-cyan-600/80 flex items-center justify-center text-white mb-2">
+                  <i data-lucide="activity" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-xl font-black">CarePlus Dental Studio</h3>
+                <p class="text-xs text-cyan-200">Sector 50, Noida • Multi-Specialty Clinic</p>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Pre-Configured Architecture</div>
+              <ul class="space-y-2.5 text-xs text-slate-600 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> Instant Online Appointment Booking Form</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> Smile Makeover Before/After Gallery</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> Doctor Credentials & Speciality Pricing</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> Google Maps Schema & Reviews Embed</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="p-6 pt-0 space-y-2.5">
+            <a href="demos/clinic.html" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white py-3 rounded-xl font-bold text-xs transition-all shadow-md group-hover:bg-indigo-600">
+              <span>Launch Live Interactive Demo</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20want%20to%20order%20the%20CarePlus%20Dental%20Clinic%20website%20blueprint%20for%20%E2%82%B97,999." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 py-2.5 rounded-xl font-bold text-xs transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> Order for ₹7,999 ($199)
+            </a>
+          </div>
+        </div>
+
+        <!-- Blueprint 2: Gym -->
+        <div class="template-card gym bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-52 bg-gradient-to-tr from-slate-950 via-slate-900 to-orange-950 p-6 flex flex-col justify-between relative text-white">
+              <div class="flex items-center justify-between">
+                <span class="bg-orange-500/20 text-orange-400 border border-orange-500/30 text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                  Gym & Fitness Club
+                </span>
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> High Conversion
+                </span>
+              </div>
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-orange-500/80 flex items-center justify-center text-white mb-2">
+                  <i data-lucide="flame" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-xl font-black">IronForge Performance Club</h3>
+                <p class="text-xs text-orange-200">Sector 63, Noida • 10,000 Sq.Ft Training Facility</p>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Pre-Configured Architecture</div>
+              <ul class="space-y-2.5 text-xs text-slate-600 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> 1-Click Free Workout Pass WhatsApp Lead Generator</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Interactive 3-Tier Membership Pricing Cards</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Crossfit, Strength & Recovery Showcase</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Coach Credentials & Metro Location Badge</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 space-y-2.5">
+            <a href="demos/gym.html" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white py-3 rounded-xl font-bold text-xs transition-all shadow-md group-hover:bg-indigo-600">
+              <span>Launch Live Interactive Demo</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20want%20to%20order%20the%20IronForge%20Gym%20website%20blueprint%20for%20%E2%82%B97,999." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 py-2.5 rounded-xl font-bold text-xs transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> Order for ₹7,999 ($199)
+            </a>
+          </div>
+        </div>
+
+        <!-- Blueprint 3: Salon -->
+        <div class="template-card salon bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-52 bg-gradient-to-tr from-rose-950 via-rose-900 to-slate-900 p-6 flex flex-col justify-between relative text-white">
+              <div class="flex items-center justify-between">
+                <span class="bg-rose-500/20 text-rose-300 border border-rose-400/30 text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                  Beauty, Salon & Spa
+                </span>
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Ultra Aesthetic
+                </span>
+              </div>
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-rose-600/80 flex items-center justify-center text-white mb-2">
+                  <i data-lucide="crown" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-xl font-black">Luxe Aura Bridal Studio</h3>
+                <p class="text-xs text-rose-200">Sector 18, Noida • Luxury Hair & Spa Lounge</p>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Pre-Configured Architecture</div>
+              <ul class="space-y-2.5 text-xs text-slate-600 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-600"></i> Bridal Makeup Lookbook & Client Reviews</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-600"></i> Service Menu with Transparent Rate Cards</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-600"></i> VIP Pre-Bridal Consultation Booking Form</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-600"></i> Sector 18 Mall of India Corridor Authority</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 space-y-2.5">
+            <a href="demos/salon.html" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white py-3 rounded-xl font-bold text-xs transition-all shadow-md group-hover:bg-indigo-600">
+              <span>Launch Live Interactive Demo</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20want%20to%20order%20the%20Luxe%20Aura%20Salon%20website%20blueprint%20for%20%E2%82%B97,999." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 py-2.5 rounded-xl font-bold text-xs transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> Order for ₹7,999 ($199)
+            </a>
+          </div>
+        </div>
+
+        <!-- Blueprint 4: Real Estate -->
+        <div class="template-card realestate bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-52 bg-gradient-to-tr from-slate-950 via-emerald-950 to-slate-900 p-6 flex flex-col justify-between relative text-white">
+              <div class="flex items-center justify-between">
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                  Real Estate & Builders
+                </span>
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> RERA Compliant
+                </span>
+              </div>
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-emerald-600/80 flex items-center justify-center text-white mb-2">
+                  <i data-lucide="building-2" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-xl font-black">PrimeAcre Luxury Estates</h3>
+                <p class="text-xs text-emerald-200">Noida Expressway & Sector 150 Sports City</p>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Pre-Configured Architecture</div>
+              <ul class="space-y-2.5 text-xs text-slate-600 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Dynamic Sector & Budget Filter Bar</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Automated WhatsApp Brochure Download Trigger</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Free Chauffeur Site Visit Scheduler</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Jewar Airport Growth Corridor Data</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 space-y-2.5">
+            <a href="demos/realestate.html" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white py-3 rounded-xl font-bold text-xs transition-all shadow-md group-hover:bg-indigo-600">
+              <span>Launch Live Interactive Demo</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20want%20to%20order%20the%20PrimeAcre%20Real%20Estate%20website%20blueprint%20for%20%E2%82%B97,999." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 py-2.5 rounded-xl font-bold text-xs transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> Order for ₹7,999 ($199)
+            </a>
+          </div>
+        </div>
+
+        <!-- Blueprint 5: Restaurant -->
+        <div class="template-card restaurant bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-52 bg-gradient-to-tr from-stone-950 via-amber-950 to-stone-900 p-6 flex flex-col justify-between relative text-white">
+              <div class="flex items-center justify-between">
+                <span class="bg-amber-500/20 text-amber-300 border border-amber-400/30 text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                  Café & Dining
+                </span>
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Zero Commission
+                </span>
+              </div>
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-amber-600/80 flex items-center justify-center text-white mb-2">
+                  <i data-lucide="coffee" class="w-5 h-5 text-amber-200"></i>
+                </div>
+                <h3 class="text-xl font-black">The Urban Roast Bistro</h3>
+                <p class="text-xs text-amber-200">Sector 104, Hajipur, Noida • Artisanal Café</p>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Pre-Configured Architecture</div>
+              <ul class="space-y-2.5 text-xs text-slate-600 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> Instant Table Booking Widget (No Swiggy cut)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> High-Resolution Digital Menu with Direct Cart</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> Direct WhatsApp Pickup & Home Delivery Desk</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> High-Street Sector 104 Foodie Hub Schema</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 space-y-2.5">
+            <a href="demos/restaurant.html" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white py-3 rounded-xl font-bold text-xs transition-all shadow-md group-hover:bg-indigo-600">
+              <span>Launch Live Interactive Demo</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20want%20to%20order%20the%20Urban%20Roast%20Restaurant%20website%20blueprint%20for%20%E2%82%B97,999." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 py-2.5 rounded-xl font-bold text-xs transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> Order for ₹7,999 ($199)
+            </a>
+          </div>
+        </div>
+
+        <!-- Blueprint 6: Coaching -->
+        <div class="template-card coaching bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-52 bg-gradient-to-tr from-slate-950 via-blue-950 to-indigo-950 p-6 flex flex-col justify-between relative text-white">
+              <div class="flex items-center justify-between">
+                <span class="bg-blue-500/20 text-blue-300 border border-blue-400/30 text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                  Education & Coaching
+                </span>
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Admissions Funnel
+                </span>
+              </div>
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-blue-600/80 flex items-center justify-center text-white mb-2">
+                  <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-xl font-black">Zenith Elite Academy</h3>
+                <p class="text-xs text-blue-200">Institutional Area, Sector 62, Noida • JEE/NEET</p>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Pre-Configured Architecture</div>
+              <ul class="space-y-2.5 text-xs text-slate-600 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Free Scholarship & Diagnostic Test Funnel</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> AIR Rankers Results & Testimonials Showcase</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Batch Modules for Foundation, Class 11, 12 & Repeaters</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Direct PDF Syllabus WhatsApp Auto-Delivery</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 space-y-2.5">
+            <a href="demos/coaching.html" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white py-3 rounded-xl font-bold text-xs transition-all shadow-md group-hover:bg-indigo-600">
+              <span>Launch Live Interactive Demo</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20want%20to%20order%20the%20Zenith%20Coaching%20website%20blueprint%20for%20%E2%82%B97,999." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 py-2.5 rounded-xl font-bold text-xs transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> Order for ₹7,999 ($199)
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included Banner -->
+  <section class="py-16 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-800">Complete Turnkey Package</span>
+        <h2 class="text-3xl font-black mt-3">What You Get in Every ₹7,999 Blueprint</h2>
+        <p class="text-slate-400 text-sm mt-2">No hidden development fees, no tech jargon. We deliver a fully working business asset.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-950/60 p-6 rounded-2xl border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-white mb-1">5-Day Live Launch</h4>
+          <p class="text-xs text-slate-400">Send us your logo and phone number; your modern website is live and taking leads in 120 hours.</p>
+        </div>
+
+        <div class="bg-slate-950/60 p-6 rounded-2xl border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center mb-4">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-white mb-1">Google Maps Local Schema</h4>
+          <p class="text-xs text-slate-400">Structured business schema coded directly into the site so Google Maps ranks you ahead of nearby competitors.</p>
+        </div>
+
+        <div class="bg-slate-950/60 p-6 rounded-2xl border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-pink-600/20 text-pink-400 flex items-center justify-center mb-4">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-white mb-1">1-Tap WhatsApp Funnel</h4>
+          <p class="text-xs text-slate-400">Never lose a mobile visitor to lengthy forms. Prospects tap once and land directly in your WhatsApp inbox.</p>
+        </div>
+
+        <div class="bg-slate-950/60 p-6 rounded-2xl border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-amber-600/20 text-amber-400 flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-white mb-1">30 Days Handholding</h4>
+          <p class="text-xs text-slate-400">Includes free text changes, photo replacements, SSL security certificates, and hosting deployment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-black text-lg">N</div>
+            <span class="text-2xl font-black tracking-tight text-white">NovaScale<span class="text-indigo-500">.</span></span>
+          </a>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            Based in Sector 62, Noida, India. We engineer hyper-growth web systems, local Google Maps rankings, and high-ROI ad funnels for ambitious clinics, gyms, salons, real estate firms, and restaurants.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">Live Demos</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="demos/clinic.html" target="_blank" class="hover:text-white transition-colors">CarePlus Dental Clinic</a></li>
+            <li><a href="demos/gym.html" target="_blank" class="hover:text-white transition-colors">IronForge Performance Gym</a></li>
+            <li><a href="demos/salon.html" target="_blank" class="hover:text-white transition-colors">Luxe Aura Bridal Salon</a></li>
+            <li><a href="demos/realestate.html" target="_blank" class="hover:text-white transition-colors">PrimeAcre Luxury Estates</a></li>
+            <li><a href="demos/restaurant.html" target="_blank" class="hover:text-white transition-colors">The Urban Roast Bistro</a></li>
+            <li><a href="demos/coaching.html" target="_blank" class="hover:text-white transition-colors">Zenith Elite Academy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing Packages</a></li>
+            <li><a href="templates.html" class="text-indigo-400 font-bold">Templates & Demos</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">Direct Touchpoints</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20have%20an%20inquiry." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl font-bold text-xs transition-colors">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Direct WhatsApp Channel
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-xl font-bold text-xs transition-colors">
+                <i data-lucide="mail" class="w-4 h-4"></i> Official Consultation Form
+              </a>
+            </li>
+            <li class="text-[11px] text-slate-500">📍 Studio: Sector 62, Noida, UP, India</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <div>&copy; 2026 NovaScale Global Media. All rights reserved. Registered Digital Agency.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/919457886467?text=Hello%20NovaScale!%20I%20am%20interested%20in%20a%20website%20template." 
+     target="_blank" 
+     class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl shadow-emerald-500/40 flex items-center justify-center transition-all hover:scale-110">
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+  </a>
+
+  <!-- Core Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    function filterTemplates(category) {
+      // update active pill
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.classList.remove('bg-slate-950', 'text-white');
+        btn.classList.add('bg-white', 'text-slate-700');
+      });
+      event.target.classList.remove('bg-white', 'text-slate-700');
+      event.target.classList.add('bg-slate-950', 'text-white');
+
+      const cards = document.querySelectorAll('.template-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
